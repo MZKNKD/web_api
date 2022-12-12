@@ -3,10 +3,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-print("りんごは1個100円です")
-a = input("りんごを何個買いますか？：")
-b = 100
-
 @app.get("/menta")
 async def calc_numbers(a, b):
     return int(a) * int(b)
